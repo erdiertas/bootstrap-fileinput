@@ -2877,6 +2877,7 @@
             return this.getFrames(':not(.file-preview-initial)' + css);
         },
         _getThumbId: function (fileId) {
+            fileId = fileId.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
             var self = this;
             return self.previewInitId + '-' + fileId;
         },
